@@ -1,19 +1,4 @@
 #include "sort.h"
-
-/**
- * swap - The function for swapping integers
- * @xp: The first integer to be swapped
- * @yp: The second integer to be swapped
- *
- * Return: Nothing
- */
-void swap(int *xp, int *yp)
-{
-	int temp = *xp;
-	*xp = *yp;
-	*yp = temp;
-}
-
 /**
  * bubble_sort - The function to sort an array
  * @array: The array to be sorted
@@ -31,7 +16,9 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[j] > array[j + 1])
 			{
-				swap(&array[j], &array[j + 1]);
+				size_t temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
 				print_array(array, size);
 			}
 		}
