@@ -7,7 +7,6 @@
  *
  * Return: No return
  */
-/* Will sort the given list in ascending order */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *head_tmp1, *head_tmp2, *aux1, *aux2;
